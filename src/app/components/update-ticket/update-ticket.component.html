@@ -1,0 +1,164 @@
+<nav class="navbar navbar-expand navbar-light bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand"><img src="/assets/images/logo.png"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-content" routerLink="/viewtickets">View Tickets</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-content" routerLink="/createticket">Create Ticket</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-content" (click)="userLogout()">Logout</a>
+        </li>
+        </ul>
+        </div>
+  </div>
+</nav>
+<div class="container">
+    <div style="width: 400px; margin: auto;" >
+        <div class="card-body">
+          <h1 class="card-title">Update Ticket</h1>
+          </div>
+          <div class="submit-form" novalidate>
+            <form>
+                <div class="form-group">
+                    <label for="reqType">Request Type:</label>
+                    <select class="form-control" name="reqType" id="reqType" [(ngModel)]="ticket.reqType">
+                        <option value="Travel Tickets">Travel Tickets</option>
+                        <option value="Hotel Stay">Hotel Stay</option>
+                        <option value="Visa">Visa</option>
+                        <option value="Work Permit">Work Permit</option>
+                      </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="ticketPriority">Priority</label>
+                    <select class="form-control" name="ticketPriority" id="ticketPriority" [(ngModel)]="ticket.ticketPriority">
+                        <option value="Normal">Normal</option>
+                        <option value="Urgent">Urgent</option>
+                        <option value="Immediate">Immediate</option>
+                      </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="fromCity">From City</label>
+                    <select class="form-control" name="fromCity" id="fromCity" [(ngModel)]="ticket.fromCity">
+                        <option value="Delhi">Delhi</option>
+                        <option value="Gurugram">Gurugram</option>
+                        <option value="Bengaluru">Bengaluru</option>
+                      </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="travelCity">To City</label>
+                    <select class="form-control" name="travelCity" id="travelCity" [(ngModel)]="ticket.travelCity">
+                        <option value="Berlin">Berlin</option>
+                        <option value="Chicago">Chicago</option>
+                        <option value="Sydney">Sydney</option>
+                      </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="fromDate">From Date</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id= "fromDate"
+                      name= "fromDate"
+                      [(ngModel)]= "ticket.fromDate"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="toDate">To Date</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id= "toDate"
+                      name= "toDate"
+                      [(ngModel)]= "ticket.toDate"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="passportNumber">Passport Number</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id= "passportNumber"
+                      name= "passportNumber"
+                      [(ngModel)]= "ticket.passportNumber"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="projectName">Project Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id= "projectName"
+                      name= "projectName"
+                      [(ngModel)]= "ticket.projectName"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="expenseBorne">Exprnse Borne By</label><br>
+                    <input type="radio" id="expenseBorne" name="expenseBorne" value="Nagarro" [(ngModel)]= "ticket.expenseBorne">
+                    <label for="expenseBorne">Nagarro</label>
+                    <br>
+                    <input type="radio" id="expenseBorne" name="expenseBorne" value="Client" [(ngModel)]= "ticket.expenseBorne">
+                    <label for="expenseBorne">Client</label>
+                  </div>
+                  <div class="form-group">
+                    <label for="travelApproveBy">Travel Approver Name - Manager/BU Head</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="travelApproveBy"
+                      name="travelApproveBy" 
+                      [(ngModel)]="ticket.travelApproveBy" 
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="travelDuration">Travel Duration</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="travelDuration"
+                      name="travelDuration" 
+                      [(ngModel)]="ticket.travelDuration" 
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="upperBoundExpense">Upper Bound Expense</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="upperBoundExpense"
+                      name="upperBoundExpense" 
+                      [(ngModel)]="ticket.upperBoundExpense" 
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="additionalDetails">Additional Details</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="additionalDetails"
+                      name="additionalDetails" 
+                      [(ngModel)]="ticket.additionalDetails" 
+                      required
+                    />
+                  </div>
+            </form>
+            <br>
+             <a routerLink='/home' class="btn btn-success" (click)="updateTicket()" style="margin-right: 16px;">Edit Ticket</a>
+             <a routerLink='/home' class="btn btn-danger" style="margin-right: 16px;">Cancel</a>
+            </div>
+          </div>
+          </div>

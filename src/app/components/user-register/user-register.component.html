@@ -1,0 +1,147 @@
+<div class="container">
+    <div style="width: 400px; margin: auto;" >
+        <div class="card-body">
+          <h1 class="card-title">User Registration</h1>
+          </div>
+          <div class="submit-form" novalidate>
+            <form>
+              <div class="form-group">
+                <label for="title">First Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="fName"
+                  name="fName" 
+                  [(ngModel)]="user.fName"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="title">Last Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lName"
+                  name="lName"
+                  [(ngModel)]="user.lName"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="title">Business Unit</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="businessUnit"
+                  name="businessUnit"
+                  [(ngModel)]="user.businessUnit"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="title">Title</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="userTitle"
+                  name="userTitle"
+                  [(ngModel)]="user.userTitle"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="title">Email</label>
+                <input
+                  type="email"
+                  pattern=".+@nagarro.com"
+                  class="form-control"
+                  id="userEmail"
+                  name="userEmail"
+                  [(ngModel)]="user.userEmail"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="title">Telephone</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="userTelephone"
+                  name="userTelephone"
+                  [(ngModel)]="user.userTelephone"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="title">Address 1</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="userAddress"
+                  name="userAddress"
+                  [(ngModel)]="user.userAddress"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="title">City</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="userCity"
+                  name="userCity"
+                  [(ngModel)]="user.userCity"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="title">State</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="userState"
+                  name="userState"
+                  [(ngModel)]="user.userState"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="title">Zip</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="userZip"
+                  name="userZip"
+                  [(ngModel)]="user.userZip"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="title">Country</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="userCountry"
+                  name="userZip"
+                  [(ngModel)]="user.userCountry"
+                  required
+                />
+              </div>
+              <br>
+              <a class="btn btn-success" (click)="saveUser()">Register User</a>
+              </form>
+            </div>
+          </div>
+</div>
+
+<!-- routerLink="/login" -->

@@ -1,0 +1,41 @@
+<div class="container">
+    <div style="width: 400px; margin: auto;" >
+        <div class="card-body">
+          <h1 class="card-title">User Login</h1>
+          </div>
+          <div class="submit-form" novalidate>
+            <form>
+              <div class="form-group">
+                <label for="title">Email/UserName</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="userEmail"
+                  name="userEmail"
+                  [(ngModel)]="userdata.userEmail"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="title">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  name="password"
+                  [(ngModel)]="userdata.password"
+                  required
+                />
+              </div>
+              </form>
+              <br>
+              <a class="btn btn-success" (click)="onUserLogin()">Login</a>
+              <br>
+              <a href="/forgotpassword">Forgot Password? Click Here</a>
+              <br>
+              <a href="/register">Register as a new User</a>
+              <br>
+              <a href="/adminlogin">Login as Admin</a>
+              </div>
+              </div>
+              </div>

@@ -1,0 +1,23 @@
+<div class="container">
+    <div style="width: 400px; margin: auto;" >
+        <div class="card-body">
+            <h1 class="card-title">Forgot Password</h1>
+            </div>
+            <div class="submit-form" novalidate>
+                <form>
+                    <div class="form-group">
+                        <label for="title">Email/UserName</label>
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="userEmail"
+                          name="userEmail"
+                          [(ngModel)]="userdata.userEmail"
+                          required
+                        />
+                      </div>
+                    </form>
+                    <a class="btn btn-success" (click)="onEmailSubmit()">Get Password</a>
+                    </div>
+    </div>
+</div>

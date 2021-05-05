@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand navbar-light bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand"><img src="/assets/images/logo.png"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-content" routerLink="/viewtickets">View Tickets</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-content" routerLink="/createticket">Create Ticket</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-content" (click)="userLogout()">Logout</a>
+          </li>
+          </ul>
+          </div>
+    </div>
+</nav>
+<br>
+<div class="container">
+    <div class="card">
+        <h5 class="card-header">Featured Covid-19 Update</h5>
+        <div class="card-body">
+          <h5 class="card-title">Global Covid-19 Data</h5>
+          <p class="card-text">Total Global Cases: {{covidGlobalData.Global.TotalConfirmed}}</p>
+          <p class="card-text">Total Deaths: {{covidGlobalData.Global.TotalDeaths}}</p>
+          <p class="card-text">Total Recovered: {{covidGlobalData.Global.TotalRecovered}}</p>
+        </div>
+      </div>
+</div>

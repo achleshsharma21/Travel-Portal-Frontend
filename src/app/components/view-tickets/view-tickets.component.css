@@ -1,0 +1,14 @@
+img {
+    height: 40px;
+    width: 110px;
+}
+.nav-content:hover{
+    background-color: white;
+    color: black;
+}
+.nav-content {
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 2px;
+}
